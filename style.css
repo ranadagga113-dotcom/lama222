@@ -1,0 +1,629 @@
+/* =========================
+   General
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --primary: #2563eb;
+    --secondary: #06b6d4;
+    --dark: #0f172a;
+    --text: #334155;
+    --light: #f8fafc;
+    --white: #ffffff;
+    --card: #ffffff;
+}
+
+
+/* =========================
+   Body
+========================= */
+
+body {
+    font-family: Arial, Tahoma, sans-serif;
+    background: var(--light);
+    color: var(--text);
+    line-height: 1.8;
+    transition: 0.3s;
+}
+
+
+/* =========================
+   Header
+========================= */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 18px 8%;
+
+    background: rgba(255, 255, 255, 0.95);
+
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+}
+
+
+/* Logo */
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--dark);
+}
+
+.logo span {
+    color: var(--primary);
+}
+
+
+/* Navbar */
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--dark);
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--primary);
+}
+
+
+/* Theme Button */
+
+.theme-btn {
+    border: none;
+    background: var(--primary);
+    color: white;
+
+    width: 42px;
+    height: 42px;
+
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    font-size: 18px;
+}
+
+
+/* =========================
+   Hero
+========================= */
+
+.hero {
+    min-height: 90vh;
+
+    padding: 80px 8%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 50px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eff6ff,
+            #ecfeff
+        );
+}
+
+
+.hero-content {
+    max-width: 650px;
+}
+
+.small-title {
+    color: var(--primary);
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+
+.hero h1 {
+    font-size: 55px;
+    line-height: 1.2;
+    color: var(--dark);
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    display: block;
+    color: var(--primary);
+}
+
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+
+/* Button */
+
+.main-btn {
+    display: inline-block;
+
+    padding: 13px 28px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: var(--primary);
+    color: white;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.main-btn:hover {
+    transform: translateY(-3px);
+    background: #1d4ed8;
+}
+
+
+/* Hero Card */
+
+.hero-card {
+    width: 400px;
+    height: 300px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--dark);
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 25px 50px rgba(0, 0, 0, 0.2);
+
+    transform: rotate(3deg);
+}
+
+.code-box {
+    border: 2px solid var(--secondary);
+
+    padding: 35px;
+
+    border-radius: 15px;
+
+    color: white;
+
+    font-size: 35px;
+    font-weight: bold;
+
+    text-align: center;
+}
+
+.code-box span {
+    display: block;
+}
+
+.code-box span:first-child {
+    color: var(--secondary);
+}
+
+
+/* =========================
+   Sections
+========================= */
+
+.section {
+    padding: 90px 8%;
+}
+
+
+.section-title {
+    text-align: center;
+
+    margin-bottom: 50px;
+}
+
+.section-title p {
+    color: var(--primary);
+    font-weight: bold;
+}
+
+.section-title h2 {
+    font-size: 40px;
+    color: var(--dark);
+}
+
+
+/* =========================
+   About
+========================= */
+
+.about-content {
+    display: grid;
+
+    grid-template-columns: 2fr 1fr;
+
+    gap: 40px;
+
+    align-items: stretch;
+}
+
+
+.about-text,
+.about-box {
+    background: var(--card);
+
+    padding: 35px;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+
+.about-text h3 {
+    font-size: 30px;
+
+    color: var(--primary);
+
+    margin-bottom: 15px;
+}
+
+
+.about-box {
+    background: var(--dark);
+
+    color: white;
+}
+
+
+.about-box .number {
+    font-size: 50px;
+
+    color: var(--secondary);
+
+    font-weight: bold;
+}
+
+
+.about-box h3 {
+    font-size: 28px;
+
+    margin-bottom: 10px;
+}
+
+
+/* =========================
+   Services
+========================= */
+
+.services-section {
+    background: #eef6ff;
+}
+
+
+.cards {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 25px;
+}
+
+
+.card {
+    background: var(--card);
+
+    padding: 30px;
+
+    border-radius: 18px;
+
+    text-align: center;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.07);
+
+    transition: 0.3s;
+}
+
+
+.card:hover {
+    transform: translateY(-10px);
+
+    box-shadow:
+        0 20px 40px rgba(37, 99, 235, 0.15);
+}
+
+
+.icon {
+    width: 70px;
+    height: 70px;
+
+    margin: 0 auto 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #eff6ff;
+
+    border-radius: 50%;
+
+    font-size: 30px;
+}
+
+
+.card h3 {
+    color: var(--dark);
+
+    margin-bottom: 10px;
+}
+
+
+/* =========================
+   Why Us
+========================= */
+
+.features {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 30px;
+}
+
+
+.feature {
+    padding: 35px;
+
+    border-right: 4px solid var(--primary);
+
+    background: var(--card);
+
+    border-radius: 12px;
+}
+
+
+.feature span {
+    font-size: 35px;
+
+    font-weight: bold;
+
+    color: var(--primary);
+}
+
+
+.feature h3 {
+    color: var(--dark);
+
+    margin: 10px 0;
+}
+
+
+/* =========================
+   Contact
+========================= */
+
+.contact-section {
+    padding: 100px 8%;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0f172a,
+            #1e3a8a
+        );
+
+    color: white;
+}
+
+
+.contact-section h2 {
+    font-size: 45px;
+
+    line-height: 1.3;
+
+    margin: 15px 0;
+}
+
+
+.contact-section .small-title {
+    color: var(--secondary);
+}
+
+
+/* =========================
+   Footer
+========================= */
+
+footer {
+    padding: 30px 8%;
+
+    background: #020617;
+
+    color: white;
+
+    text-align: center;
+}
+
+
+.footer-logo {
+    font-size: 24px;
+
+    font-weight: bold;
+
+    color: var(--secondary);
+
+    margin-bottom: 10px;
+}
+
+
+/* =========================
+   Dark Mode
+========================= */
+
+body.dark {
+    --light: #020617;
+    --dark: #f8fafc;
+    --text: #cbd5e1;
+    --white: #0f172a;
+    --card: #0f172a;
+}
+
+
+body.dark header {
+    background: #0f172a;
+}
+
+
+body.dark .hero {
+    background:
+        linear-gradient(
+            135deg,
+            #020617,
+            #0f172a
+        );
+}
+
+
+body.dark .services-section {
+    background: #020617;
+}
+
+
+body.dark .icon {
+    background: #1e293b;
+}
+
+
+/* =========================
+   Responsive Design
+========================= */
+
+@media (max-width: 900px) {
+
+    header {
+        flex-wrap: wrap;
+
+        gap: 15px;
+    }
+
+    nav {
+        order: 3;
+
+        width: 100%;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+    }
+
+
+    .hero {
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+
+    .hero-card {
+        width: 90%;
+    }
+
+
+    .cards {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .section {
+        padding: 60px 5%;
+    }
+
+
+    .hero {
+        padding: 60px 5%;
+    }
+
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+
+    .hero-card {
+        height: 220px;
+    }
+
+
+    .code-box {
+        font-size: 25px;
+    }
+
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+
+    .section-title h2 {
+        font-size: 32px;
+    }
+
+
+    .contact-section h2 {
+        font-size: 34px;
+    }
+
+}
